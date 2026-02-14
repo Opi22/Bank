@@ -4,7 +4,8 @@
   "description": "Bank API backend   to do basic task of banking like opening an account , withdraw, make a deposit and transfer money to different account",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
   },
   "repository": {
     "type": "git",
