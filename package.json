@@ -1,0 +1,27 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "Bank API backend   to do basic task of banking like opening an account , withdraw, make a deposit and transfer money to different account",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Opi22/Bank.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Opi22/Bank/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/Opi22/Bank#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.1"
+  }
+}
