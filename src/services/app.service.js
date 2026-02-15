@@ -26,3 +26,25 @@ export const Deposit=async(req, res)=>{
     }
 
 }
+export const Withdraw=async(req, res)=>{
+    // in this service we take money from 
+    // balance by decrementing the value 
+    // we get from the user request 
+    try{
+        const {amount}= req.body
+        const {email}= req.user
+        const user= await accountModel.findOne({email})
+        if(user){
+            if(amount>user.balance){
+                return res.status(400).json({message:"Insufficent balance to complete"})
+            }
+            user.balance-=amount
+            await user.save()
+            return res.status(201).json({message:`Successfully removed ${amount} from your account`})
+        }
+        return res.status(400).json({message:"Something went wront please try again"})
+    }catch(err){
+        return res.status(500).json({message:err})
+    }
+
+}
